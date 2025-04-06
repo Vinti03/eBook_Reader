@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f8f8"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#333">OpenBook Project - Block Diagram</text>
+  
+  <!-- Main Components -->
+  <!-- Microcontroller -->
+  <rect x="320" y="220" width="160" height="80" fill="#c3e6cb" stroke="#28a745" stroke-width="2" rx="5"/>
+  <text x="400" y="265" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Main Processor</text>
+  
+  <!-- E-Ink Display -->
+  <rect x="580" y="140" width="160" height="80" fill="#b8daff" stroke="#0069d9" stroke-width="2" rx="5"/>
+  <text x="660" y="170" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">E-Ink Display</text>
+  <text x="660" y="195" font-family="Arial" font-size="12" text-anchor="middle">1.5" 200×200px</text>
+  
+  <!-- Power Components -->
+  <rect x="60" y="140" width="160" height="80" fill="#b8daff" stroke="#0069d9" stroke-width="2" rx="5"/>
+  <text x="140" y="182" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">USB-C</text>
+  
+  <rect x="60" y="260" width="160" height="80" fill="#b8daff" stroke="#0069d9" stroke-width="2" rx="5"/>
+  <text x="140" y="290" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">Battery Charger</text>
+  <text x="140" y="315" font-family="Arial" font-size="12" text-anchor="middle">MCP73832</text>
+  
+  <rect x="60" y="380" width="160" height="80" fill="#f5c6cb" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="140" y="425" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">LiPo Battery</text>
+  
+  <!-- Power Regulators -->
+  <rect x="20" y="500" width="100" height="60" fill="#b8daff" stroke="#0069d9" stroke-width="2" rx="5"/>
+  <text x="70" y="535" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">3V3 LDO</text>
+  
+  <rect x="160" y="500" width="100" height="60" fill="#f5c6cb" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="210" y="535" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">5V DC/DC</text>
+  
+  <!-- Input/Storage -->
+  <rect x="580" y="260" width="160" height="80" fill="#f5c6cb" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="660" y="305" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">SD Card</text>
+  
+  <rect x="580" y="380" width="160" height="80" fill="#f5c6cb" stroke="#dc3545" stroke-width="2" rx="5"/>
+  <text x="660" y="425" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle">BUTTONS</text>
+  
+  <!-- Sensors -->
+  <rect x="320" y="440" width="120" height="60" fill="#ffeeba" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="380" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">PM Sensor</text>
+  <text x="380" y="485" font-family="Arial" font-size="12" text-anchor="middle">PMSA003</text>
+  
+  <rect x="320" y="520" width="120" height="60" fill="#ffeeba" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="380" y="545" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">CO2 Sensor</text>
+  <text x="380" y="565" font-family="Arial" font-size="12" text-anchor="middle">MH-Z19B</text>
+  
+  <rect x="480" y="480" width="120" height="60" fill="#ffeeba" stroke="#ff9800" stroke-width="2" rx="5"/>
+  <text x="540" y="505" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle">Temp/RH</text>
+  <text x="540" y="525" font-family="Arial" font-size="12" text-anchor="middle">BME680</text>
+  
+  <!-- Connection Lines -->
+  <!-- USB to Battery Charger -->
+  <line x1="140" y1="220" x2="140" y2="260" stroke="#dc3545" stroke-width="2"/>
+  <text x="150" y="245" font-family="Arial" font-size="12" fill="#dc3545">5V</text>
+  
+  <!-- Battery Charger to Battery -->
+  <line x1="140" y1="340" x2="140" y2="380" stroke="#dc3545" stroke-width="2"/>
+  
+  <!-- Battery to Power Regulators -->
+  <line x1="140" y1="460" x2="140" y2="480" stroke="#dc3545" stroke-width="2"/>
+  <line x1="140" y1="480" x2="70" y2="480" stroke="#dc3545" stroke-width="2"/>
+  <line x1="70" y1="480" x2="70" y2="500" stroke="#dc3545" stroke-width="2"/>
+  <line x1="140" y1="480" x2="210" y2="480" stroke="#dc3545" stroke-width="2"/>
+  <line x1="210" y1="480" x2="210" y2="500" stroke="#dc3545" stroke-width="2"/>
+  
+  <!-- USB to Main Processor -->
+  <line x1="220" y1="180" x2="320" y2="180" stroke="#000" stroke-width="2"/>
+  <line x1="320" y1="180" x2="320" y2="220" stroke="#000" stroke-width="2"/>
+  <text x="270" y="175" font-family="Arial" font-size="12">USB</text>
+  
+  <!-- Processor to E-Ink Display -->
+  <line x1="480" y1="220" x2="520" y2="220" stroke="#000" stroke-width="2"/>
+  <line x1="520" y1="220" x2="520" y2="180" stroke="#000" stroke-width="2"/>
+  <line x1="520" y1="180" x2="580" y2="180" stroke="#000" stroke-width="2"/>
+  <text x="540" y="175" font-family="Arial" font-size="12">SPI</text>
+  
+  <!-- Processor to SD Card -->
+  <line x1="580" y1="300" x2="550" y2="300" stroke="#000" stroke-width="2"/>
+  <line x1="550" y1="300" x2="550" y2="260" stroke="#000" stroke-width="2"/>
+  <line x1="550" y1="260" x2="480" y2="260" stroke="#000" stroke-width="2"/>
+  
+  <!-- Processor to Buttons -->
+  <line x1="480" y1="280" x2="540" y2="280" stroke="#000" stroke-width="2"/>
+  <line x1="540" y1="280" x2="540" y2="420" stroke="#000" stroke-width="2"/>
+  <line x1="540" y1="420" x2="580" y2="420" stroke="#000" stroke-width="2"/>
+  <text x="520" y="415" font-family="Arial" font-size="12">3xGPIO</text>
+  
+  <!-- Processor to Sensors -->
+  <line x1="400" y1="300" x2="400" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="400" y1="360" x2="300" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="300" y1="360" x2="300" y2="470" stroke="#000" stroke-width="2"/>
+  <line x1="300" y1="470" x2="320" y2="470" stroke="#000" stroke-width="2"/>
+  <text x="310" y="465" font-family="Arial" font-size="12">UART</text>
+  
+  <line x1="400" y1="300" x2="400" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="400" y1="360" x2="300" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="300" y1="360" x2="300" y2="550" stroke="#000" stroke-width="2"/>
+  <line x1="300" y1="550" x2="320" y2="550" stroke="#000" stroke-width="2"/>
+  
+  <line x1="400" y1="300" x2="400" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="400" y1="360" x2="460" y2="360" stroke="#000" stroke-width="2"/>
+  <line x1="460" y1="360" x2="460" y2="510" stroke="#000" stroke-width="2"/>
+  <line x1="460" y1="510" x2="480" y2="510" stroke="#000" stroke-width="2"/>
+  <text x="470" y="505" font-family="Arial" font-size="12">I2C</text>
+  
+  <!-- Power Connections -->
+  <text x="380" y="216" font-family="Arial" font-size="12" fill="#28a745">3V3</text>
+  <text x="650" y="136" font-family="Arial" font-size="12" fill="#28a745">3V3</text>
+  <text x="650" y="256" font-family="Arial" font-size="12" fill="#28a745">3V3</text>
+  <text x="536" y="475" font-family="Arial" font-size="12" fill="#28a745">3V3</text>
+  <text x="380" y="436" font-family="Arial" font-size="12" fill="#dc3545">5V</text>
+  <text x="380" y="516" font-family="Arial" font-size="12" fill="#dc3545">5V</text>
+  
+  <!-- Legend -->
+  <rect x="600" y="50" width="20" height="10" fill="#c3e6cb" stroke="#28a745" stroke-width="1"/>
+  <text x="625" y="60" font-family="Arial" font-size="12" text-anchor="start">Processing</text>
+  
+  <rect x="600" y="70" width="20" height="10" fill="#b8daff" stroke="#0069d9" stroke-width="1"/>
+  <text x="625" y="80" font-family="Arial" font-size="12" text-anchor="start">Interface</text>
+  
+  <rect x="600" y="90" width="20" height="10" fill="#f5c6cb" stroke="#dc3545" stroke-width="1"/>
+  <text x="625" y="100" font-family="Arial" font-size="12" text-anchor="start">Power/Input</text>
+  
+  <rect x="600" y="110" width="20" height="10" fill="#ffeeba" stroke="#ff9800" stroke-width="1"/>
+  <text x="625" y="120" font-family="Arial" font-size="12" text-anchor="start">Sensors</text>
+</svg>
