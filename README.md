@@ -38,7 +38,7 @@ OpenBook
     README.md                   // Acest fișier
 
 ## Diagramă Bloc a Sistemului
-![Diagrama bloc a proiectului OpenBook](./block_diagram.svg)
+![Diagrama bloc a proiectului OpenBook](./diagrama.jpg)
 
 ## Bill Of Materials (BOM)
 
